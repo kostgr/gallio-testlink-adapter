@@ -1,1 +1,5 @@
 *.bak
+**/obj/**
+TestLinkAPI/testlinkApi.xml
+**/bin/**
+packages/**
