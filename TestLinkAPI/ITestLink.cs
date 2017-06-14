@@ -45,7 +45,7 @@ namespace Meyn.TestLink
 
         #region Builds
         [XmlRpcMethod("tl.createBuild", StructParams=true)]
-        object[] createBuild(string devKey, int testplanid, string buildname, string buildnotes);
+        object[] createBuild(string devKey, int testplanid, string buildname, string buildnotes, int copytestersfrombuild = 0);
 
         [XmlRpcMethod("tl.getBuildsForTestPlan", StructParams = true)]
         object getBuildsForTestPlan(string devKey, int testplanid);

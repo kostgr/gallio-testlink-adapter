@@ -265,10 +265,10 @@ namespace Meyn.TestLink
         /// <param name="buildname">name of the build</param>
         /// <param name="buildnotes">notes</param>
         /// <returns>General Result object</returns>
-        public GeneralResult CreateBuild(int testplanid, string buildname, string buildnotes)
+        public GeneralResult CreateBuild(int testplanid, string buildname, string buildnotes, int copytestersfrombuild = 0)
         {
             stateIsValid();
-            object[] o = proxy.createBuild(devkey, testplanid, buildname, buildnotes);
+            object[] o = proxy.createBuild(devkey, testplanid, buildname, buildnotes, copytestersfrombuild);
             handleErrorMessage(o);
             foreach (XmlRpcStruct data in o)
                 return new GeneralResult(data);
