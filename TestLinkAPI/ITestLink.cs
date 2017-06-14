@@ -49,7 +49,9 @@ namespace Meyn.TestLink
 
         [XmlRpcMethod("tl.getBuildsForTestPlan", StructParams = true)]
         object getBuildsForTestPlan(string devKey, int testplanid);
-        
+
+        [XmlRpcMethod("tl.closeBuild", StructParams = true)]
+        object[] closeBuild(string devKey, int buildid);
         #endregion
 
         #region TestProject

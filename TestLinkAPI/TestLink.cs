@@ -258,6 +258,16 @@ namespace Meyn.TestLink
             return retval;
         }
 
+        public GeneralResult closeBuild(int buildid)
+        {
+            stateIsValid();
+            object[] o = proxy.closeBuild(devkey, buildid);
+            handleErrorMessage(o);
+            foreach (XmlRpcStruct data in o)
+                return new GeneralResult(data);
+            return null;
+        }
+
         /// <summary>
         /// create a build for a testplan
         /// </summary>
